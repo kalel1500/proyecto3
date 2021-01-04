@@ -55,7 +55,7 @@ function cargaContenido_insertarContacto(url, metodo, funcion) {
 		}
 		
 		peticion_insertarContacto.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-		peticion_insertarContacto.send("nombreArchivo_contacto="+foto_insertarContacto+"&nombreMostrar_contacto="+nombreMostrar_insertarContacto+"&nombre1_contacto="+nombre1_insertarContacto+"&nombre2_contacto="+nombre2_insertarContacto+"&apellido1_contacto="+apellido1_insertarContacto+"&apellido2_contacto="+apellido2_insertarContacto+"&telefono_contacto="+telefono_insertarContacto+"&email_contacto="+correo_insertarContacto+"&comentario_contacto="+informacion_insertarContacto);
+		peticion_insertarContacto.send("nombreArchivo_contacto="+foto_insertarContacto+"&nombreMostrar_contacto="+nombreMostrar_insertarContacto+"&nombre1_contacto="+nombre1_insertarContacto+"&nombre2_contacto="+nombre2_insertarContacto+"&apellido1_contacto="+apellido1_insertarContacto+"&apellido2_contacto="+apellido2_insertarContacto+"&telefono_contacto="+telefono_insertarContacto+"&email_contacto="+correo_insertarContacto+"&comentario_contacto="+informacion_insertarContacto+"&latitud="+latitud+"&longitud="+longitud);
 		
 			
 	}
