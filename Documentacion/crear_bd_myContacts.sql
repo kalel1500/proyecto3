@@ -7,8 +7,10 @@
 /*----------CREAR BASE DE DATOS------------------------------------------------------------------------------------------------------------*/
 /*----------CREAR BASE DE DATOS------------------------------------------------------------------------------------------------------------*/
 /*----------CREAR BASE DE DATOS------------------------------------------------------------------------------------------------------------*/
-DROP DATABASE IF EXISTS bd_proyecto_3;
-CREATE DATABASE IF NOT EXISTS bd_proyecto_3;
+/*DROP DATABASE IF EXISTS bd_proyecto_3;
+CREATE DATABASE IF NOT EXISTS bd_proyecto_3;*/
+DROP DATABASE IF EXISTS 1819_pr03_mycontacts_silicio;
+CREATE DATABASE IF NOT EXISTS 1819_pr03_mycontacts_silicio;
 
 
 
@@ -17,13 +19,14 @@ CREATE DATABASE IF NOT EXISTS bd_proyecto_3;
 /*-----------CREAR TABLAS-----------------------------------------------------------------------------------------------------------------*/
 /*-----------CREAR TABLAS-----------------------------------------------------------------------------------------------------------------*/
 /*-----------CREAR TABLAS-----------------------------------------------------------------------------------------------------------------*/
-USE `bd_proyecto_3`;
+/*USE `bd_proyecto_3`;*/
+USE `1819_pr03_mycontacts_silicio`;
 
 CREATE TABLE IF NOT EXISTS `tbl_usuario` (
-`id_usuario`				int(11) COLLATE utf8_unicode_ci 						NOT NULL AUTO_INCREMENT,
-`rutaArchivo_usuario`		varchar(100) COLLATE utf8_unicode_ci					DEFAULT 'assets/imagenes/usuarios/' COMMENT 'Ruta foto perfil',
-`nombreArchivo_usuario`		varchar(100) COLLATE utf8_unicode_ci					DEFAULT 'default_user' 				COMMENT 'Nombre foto perfil',
-`extensionArchivos_usuario`	varchar(10) COLLATE utf8_unicode_ci						DEFAULT '.png' 						COMMENT 'Extension foto perfil',
+`id_usuario`				int(11) 						COLLATE utf8_unicode_ci NOT NULL AUTO_INCREMENT,
+`rutaArchivo_usuario`		varchar(100) 					COLLATE utf8_unicode_ci	DEFAULT 'assets/imagenes/usuarios/' COMMENT 'Ruta foto perfil',
+`nombreArchivo_usuario`		varchar(100) 					COLLATE utf8_unicode_ci	DEFAULT 'default_user' 				COMMENT 'Nombre foto perfil',
+`extensionArchivos_usuario`	varchar(10) 					COLLATE utf8_unicode_ci	DEFAULT '.png' 						COMMENT 'Extension foto perfil',
 `email_usuario`				varchar(100)					COLLATE utf8_unicode_ci	DEFAULT NULL,
 `usuario_usuario`			varchar(100)					COLLATE utf8_unicode_ci	DEFAULT NULL,
 `password_usuario`			varchar(255)					COLLATE utf8_unicode_ci	DEFAULT NULL,

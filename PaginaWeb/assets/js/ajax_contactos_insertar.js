@@ -17,8 +17,8 @@ var correo_insertarContacto;
 var informacion_insertarContacto;
 
 var divAlertasVerde = document.getElementById('div-alertas-verde');
-var divErrorMos = document.getElementById('div_error_mostrar');
-var divErrorTel = document.getElementById('div_error_tel');
+var divErrorCrearMos = document.getElementById('div_errorCrear_mostrar');
+var divErrorCrearTel = document.getElementById('div_errorCrear_tel');
 
 function inicializaXhr_insertarContacto() {
 	if(window.XMLHttpRequest) {
@@ -40,16 +40,20 @@ function cargaContenido_insertarContacto(url, metodo, funcion) {
 			var msgTel = "";
 			if (nombreMostrar_insertarContacto == "") {
 				msgMos = "El campo Mostrar es obligatorio";
-				divErrorMos.style.display = "inherit";
-				divErrorMos.innerHTML = msgMos;
+				divErrorCrearMos.style.display = "inherit";
+				divErrorCrearMos.innerHTML = msgMos;
+				document.getElementById('inp_nombreMostrar_ins').focus();
 			}
 			if (telefono_insertarContacto == "") {
 				msgTel = "El campo Telefono es obligatorio";
-				divErrorTel.style.display = "inherit";
-				divErrorTel.innerHTML = msgTel;
+				divErrorCrearTel.style.display = "inherit";
+				divErrorCrearTel.innerHTML = msgTel;
+				if (nombreMostrar_insertarContacto != "") {
+					document.getElementById('inp_telefono_ins').focus();
+				}
 			}
 
-			setTimeout('borrarMensaje_modificarPerfil()',2000);
+			setTimeout('borrarMensaje_insertarContacto()',2000);
 			return false;
 			
 		}
@@ -66,8 +70,8 @@ function borrarMensaje_insertarContacto() {
 	document.getElementById('btn_cancelar_ins').disabled = false;
 	divAlertasVerde.innerHTML = "";
 	divAlertasVerde.style.display = "none";
-	divErrorMos.style.display = "none";
-	divErrorTel.style.display = "none";
+	divErrorCrearMos.style.display = "none";
+	divErrorCrearTel.style.display = "none";
 	
 }
 

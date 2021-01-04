@@ -18,8 +18,8 @@ var correo_modificarContacto;
 var informacion_modificarContacto;
 
 var divAlertasVerde = document.getElementById('div-alertas-verde');
-var divErrorMos = document.getElementById('div_error_mostrar');
-var divErrorTel = document.getElementById('div_error_tel');
+var divErrorModificarMostrar = document.getElementById('div_errorModificar_mostrar');
+var divErrorModificarTel = document.getElementById('div_errorModificar_tel');
 
 
 function inicializaXhr_modificarContacto() {
@@ -30,7 +30,7 @@ function inicializaXhr_modificarContacto() {
 		return new ActiveXObject("Microsoft.XMLHTTP");
 	}
 }
-function cargaContenido_modificarContacto(url, metodo, funcion, id) {
+function cargaContenido_modificarContacto(url, metodo, funcion) {
 	peticion_modificarContacto = inicializaXhr_modificarContacto();
 	if(peticion_modificarContacto) {
 		peticion_modificarContacto.onreadystatechange = funcion;
@@ -42,13 +42,17 @@ function cargaContenido_modificarContacto(url, metodo, funcion, id) {
 			var msgTel = "";
 			if (nombreMostrar_modificarContacto == "") {
 				msgMos = "El campo Mostrar es obligatorio";
-				divErrorMos.style.display = "inherit";
-				divErrorMos.innerHTML = msgMos;
+				divErrorModificarMostrar.style.display = "inherit";
+				divErrorModificarMostrar.innerHTML = msgMos;
+				document.getElementById('inp_nombreMostrar_mod').focus();
 			}
 			if (telefono_modificarContacto == "") {
 				msgTel = "El campo Telefono es obligatorio";
-				divErrorTel.style.display = "inherit";
-				divErrorTel.innerHTML = msgTel;
+				divErrorModificarTel.style.display = "inherit";
+				divErrorModificarTel.innerHTML = msgTel;
+				if (nombreMostrar_modificarContacto != "") {
+					document.getElementById('inp_telefono_mod').focus();
+				}
 			}
 
 			setTimeout('borrarMensaje_modificarContacto()',2000);
@@ -57,7 +61,7 @@ function cargaContenido_modificarContacto(url, metodo, funcion, id) {
 		}
 		
 		peticion_modificarContacto.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-		peticion_modificarContacto.send("nombreArchivo_contacto="+foto_modificarContacto+"&nombreMostrar_contacto="+nombreMostrar_modificarContacto+"&nombre1_contacto="+nombre1_modificarContacto+"&nombre2_contacto="+nombre2_modificarContacto+"&apellido1_contacto="+apellido1_modificarContacto+"&apellido2_contacto="+apellido2_modificarContacto+"&telefono_contacto="+telefono_modificarContacto+"&email_contacto="+correo_modificarContacto+"&comentario_contacto="+informacion_modificarContacto+"&id_contacto="+id);
+		peticion_modificarContacto.send("nombreArchivo_contacto="+foto_modificarContacto+"&nombreMostrar_contacto="+nombreMostrar_modificarContacto+"&nombre1_contacto="+nombre1_modificarContacto+"&nombre2_contacto="+nombre2_modificarContacto+"&apellido1_contacto="+apellido1_modificarContacto+"&apellido2_contacto="+apellido2_modificarContacto+"&telefono_contacto="+telefono_modificarContacto+"&email_contacto="+correo_modificarContacto+"&comentario_contacto="+informacion_modificarContacto+"&id_contacto="+id_modificarContacto);
 		
 			
 	}
@@ -69,14 +73,15 @@ function borrarMensaje_modificarContacto() {
 	document.getElementById('btn_guardar_mod').disabled = false;
 	divAlertasVerde.innerHTML = "";
 	divAlertasVerde.style.display = "none";
-	divErrorMos.style.display = "none";
-	divErrorTel.style.display = "none";
+	divErrorModificarMostrar.style.display = "none";
+	divErrorModificarTel.style.display = "none";
 
 }
 
 function insertarDatos_modificarContacto(){
 
 	//foto_modificarContacto=document.form_mod_contacto.inp_subirFoto.value;
+	id_modificarContacto=document.form_mod_contacto.inp_id_mod.value;
 	foto_modificarContacto="default_user";
 	nombreMostrar_modificarContacto=document.form_mod_contacto.inp_nombreMostrar_mod.value;
 	nombre1_modificarContacto=document.form_mod_contacto.inp_nombre1_mod.value;
@@ -107,16 +112,16 @@ function insertarDatos_modificarContacto(){
 }
 
 
-function iniciar_modificarContacto(id) {
+function iniciar_modificarContacto() {
 	var url = "assets/php/proc/contactos_modificar.proc.php";
 
-	cargaContenido_modificarContacto(url, "POST", insertarDatos_modificarContacto, id);
+	cargaContenido_modificarContacto(url, "POST", insertarDatos_modificarContacto);
 }
 
 
-function escuchar_modificarContacto(id) {
+function escuchar_modificarContacto() {
 	document.getElementById("form_mod_contacto").addEventListener("submit", function(event){
 		event.preventDefault();
-		iniciar_modificarContacto(id);
+		iniciar_modificarContacto();
 	});
 }

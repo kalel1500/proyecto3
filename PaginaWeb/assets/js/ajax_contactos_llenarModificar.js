@@ -58,6 +58,7 @@ function consultarDatos_llenarModrificar(){
 			
 			if (respuesta_llenarModrificar != "vacio") {
 
+				id_llenarModrificar = respuesta_llenarModrificar[0].id_contacto;
 				fotoRuta_llenarModrificar = respuesta_llenarModrificar[0].rutaArchivo_contacto;
 				foto_llenarModrificar = respuesta_llenarModrificar[0].nombreArchivo_contacto;
 				fotoExt_llenarModrificar = respuesta_llenarModrificar[0].extensionArchivos_contacto;
@@ -70,6 +71,7 @@ function consultarDatos_llenarModrificar(){
 				correo_llenarModrificar = respuesta_llenarModrificar[0].email_contacto;
 				informacion_llenarModrificar = respuesta_llenarModrificar[0].comentario_contacto;
 
+				((id_llenarModrificar == null)? (id_llenarModrificar = ""): (id_llenarModrificar=id_llenarModrificar));
 				((fotoRuta_llenarModrificar == null)? (fotoRuta_llenarModrificar = ""): (fotoRuta_llenarModrificar=fotoRuta_llenarModrificar));
 				((foto_llenarModrificar == null)? (foto_llenarModrificar = ""): (foto_llenarModrificar=foto_llenarModrificar));
 				((fotoExt_llenarModrificar == null)? (fotoExt_llenarModrificar = ""): (fotoExt_llenarModrificar=fotoExt_llenarModrificar));
@@ -82,6 +84,7 @@ function consultarDatos_llenarModrificar(){
 				((correo_llenarModrificar == null)? (correo_llenarModrificar = ""): (correo_llenarModrificar=correo_llenarModrificar));
 				((informacion_llenarModrificar == null)? (informacion_llenarModrificar = ""): (informacion_llenarModrificar=informacion_llenarModrificar));
 
+				document.getElementById('inp_id_mod').value = id_llenarModrificar;
 				document.getElementById('inp_nombreMostrar_mod').value = usuario_llenarModrificar;
 				document.getElementById('inp_nombre1_mod').value = nombre1_llenarModrificar;
 				document.getElementById('inp_nombre2_mod').value = nombre2_llenarModrificar;

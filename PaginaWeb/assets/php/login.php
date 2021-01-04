@@ -9,7 +9,7 @@
 		if (count($results) > 0 && password_verify($_POST['password'], $results['password_usuario'])) {
 			if ($results['habilitado_usuario'] == 'si') {
 				$_SESSION['user_id'] = $results['id_usuario'];
-				header("Location: index.php?mostrar=contactos");
+				header("Location: index.php");
 			} else {
 				$message = 'El usuario esta deshabilitado. Consulte con el administrador';
 			}

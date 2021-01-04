@@ -73,26 +73,28 @@
 										<input type="radio" name="inp_radioFoto_ins" id="inp2_radioFoto_ins" value="cambiar"> Cambiar
 									</label>
 									<label class="radio-inline">
-										<input type="radio" name="inp_radioFoto_ins" id="inp3_radioFoto_ins" value="quitar"> Quitar
+										<input type="radio" name="inp_radioFoto_ins" id="inp3_radioFoto_ins" value="quitar" disabled> Quitar
 									</label>
 								</div>
 							</div>
 
 							<div class="form-group" style="display: none;" id="group_subirFoto_ins">
-								<label class="col-sm-4 control-label" for="inp_subirFoto">Cambiar</label>
+								<label class="col-sm-4 control-label" for="inp_subirFoto">Seleccionar archivo</label>
 								<div class="col-sm-8">
-									<input class="form-control" type="file" id="inp_subirFoto_mod" name="inp_subirFoto_ins" disabled value="default_user">
+									<input class="form-control" type="file" id="inp_subirFoto_mod" name="inp_subirFoto_ins" disabled value="default_user" title="Deshabilitado por falta de tiempo">
 								</div>
 							</div>
 							
 							<div class="form-group">
 								<label class="col-sm-4 control-label" for="inp_nombreMostrar_mod">Mostrar como</label>
 								<div class="col-sm-8">
-									<input class="form-control" type="text" id="inp_nombreMostrar_ins" name="inp_nombreMostrar_ins" placeholder="Nombre que se mostrara*">
+									<input class="form-control" type="text" id="inp_nombreMostrar_ins" name="inp_nombreMostrar_ins" placeholder="*Nombre que se mostrara">
+									<label class="label-campo-obligatorio">Campo obligatorio*</label>
 								</div>
+
 							</div>
 
-							<div class="alert alert-danger" role="alert" style="display: none;" id="div_error_mostrar"></div>
+							<div class="alert alert-danger" role="alert" style="display: none;" id="div_errorCrear_mostrar"></div>
 							
 							<div class="form-group">
 								<label class="col-sm-4 control-label" for="inp_nombre1_mod">Nombre 1</label>
@@ -126,11 +128,13 @@
 								<label class="col-sm-4 control-label" for="inp_telefono_mod">Teléfono</label>
 								<div class="input-group col-sm-8 pading-input-group">
 									<span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
-									<input class="form-control" type="text" id="inp_telefono_ins" name="inp_telefono_ins" placeholder="xxxxxxxxx*">
+									<input class="form-control" type="text" id="inp_telefono_ins" name="inp_telefono_ins" placeholder="*xxxxxxxxx">
+									<br>
+									<label class="label-campo-obligatorio">Campo obligatorio*</label>
 								</div>
 							</div>
 
-							<div class="alert alert-danger" role="alert" style="display: none;" id="div_error_tel"></div>
+							<div class="alert alert-danger" role="alert" style="display: none;" id="div_errorCrear_tel"></div>
 							
 							<div class="form-group">
 								<label class="col-sm-4 control-label" for="inp_correo_mod">Correo electrónico</label>
@@ -143,7 +147,7 @@
 							<div class="form-group">
 								<label class="col-sm-4 control-label" for="inp_informacion_mod">Mas información</label>
 								<div class="col-sm-8">
-									<textarea class="form-control" rows="4" id="inp_informacion_ins" name="inp_informacion_ins" placeholder="Notas"></textarea>
+									<textarea class="form-control" rows="4" id="inp_informacion_ins" name="inp_informacion_ins" placeholder="Notas" maxlength="50"></textarea>
 								</div>
 							</div>
 							
@@ -216,9 +220,16 @@
 							</div>
 
 							<div class="form-group" style="display: none;" id="group_subirFoto_mod">
-								<label class="col-sm-4 control-label" for="inp_subirFoto">Cambiar</label>
+								<label class="col-sm-4 control-label" for="inp_subirFoto_mod">Seleccionar archivo</label>
 								<div class="col-sm-8">
-									<input class="form-control" type="file" id="inp_subirFoto_mod" name="inp_subirFoto_mod" disabled value="default_user">
+									<input class="form-control" type="file" id="inp_subirFoto_mod" name="inp_subirFoto_mod" disabled value="default_user" title="Deshabilitado por falta de tiempo">
+								</div>
+							</div>
+
+							<div class="form-group" style="display: none;">
+								<label class="col-sm-4 control-label" for="inp_id_mod">id</label>
+								<div class="col-sm-8">
+									<input class="form-control" type="text" id="inp_id_mod" name="inp_id_mod">
 								</div>
 							</div>
 							
@@ -229,7 +240,7 @@
 								</div>
 							</div>
 
-							<div class="alert alert-danger" role="alert" style="display: none;" id="div_error_mos"></div>
+							<div class="alert alert-danger" role="alert" style="display: none;" id="div_errorModificar_mostrar"></div>
 							
 							<div class="form-group">
 								<label class="col-sm-4 control-label" for="inp_nombre1_mod">Nombre 1</label>
@@ -267,7 +278,7 @@
 								</div>
 							</div>
 
-							<div class="alert alert-danger" role="alert" style="display: none;" id="div_error_tel"></div>
+							<div class="alert alert-danger" role="alert" style="display: none;" id="div_errorModificar_tel"></div>
 							
 							<div class="form-group">
 								<label class="col-sm-4 control-label" for="inp_correo_mod">Correo electrónico</label>
@@ -280,7 +291,7 @@
 							<div class="form-group">
 								<label class="col-sm-4 control-label" for="inp_informacion_mod">Mas información</label>
 								<div class="col-sm-8">
-									<textarea class="form-control" rows="4" id="inp_informacion_mod" name="inp_informacion_mod"></textarea>
+									<textarea class="form-control" rows="4" id="inp_informacion_mod" name="inp_informacion_mod" maxlength="50"></textarea>
 								</div>
 							</div>
 							
@@ -354,7 +365,7 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Ubicación</h4>
+					<h4 class="modal-title">Ubicación (no funciona)</h4>
 				</div>
 				<div class="modal-body">
 					<div id="mapid"></div>

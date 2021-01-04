@@ -1,0 +1,6 @@
+usuarios:
+	usuario01
+	usuario02
+
+contraseñas:
+	1234

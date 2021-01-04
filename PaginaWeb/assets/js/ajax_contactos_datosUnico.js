@@ -91,47 +91,54 @@ function consultarDatos_datosContactoUnico(){
 							
 
 				tabla += '' +
-				
-				'<div class="row center-block margin-rows-perfil">' +
-					'<div class="col-sm-6"><strong>Nombre a mostrar:</strong></div>' +
-					'<div class="col-sm-6 fondo-datos-perfil">' + nombreMostrar_datosContactoUnico + '</div>' +
-				'</div>' +
-				'<div class="row center-block margin-rows-perfil">' +
-					'<div class="col-sm-6"><strong>Nombre 1:</strong></div>' +
-					'<div class="col-sm-6 fondo-datos-perfil">' + nombre1_datosContactoUnico + '</div>' +
-				'</div>' +
-				'<div class="row center-block margin-rows-perfil">' +
-					'<div class="col-sm-6"><strong>Nombre 2:</strong></div>' +
-					'<div class="col-sm-6 fondo-datos-perfil">' + nombre2_datosContactoUnico + '</div>' +
-				'</div>' +
-				'<div class="row center-block margin-rows-perfil">' +
-					'<div class="col-sm-6"><strong>Apellido 1:</strong></div>' +
-					'<div class="col-sm-6 fondo-datos-perfil">' + apellido1_datosContactoUnico + '</div>' +
-				'</div>' +
-				'<div class="row center-block margin-rows-perfil">' +
-					'<div class="col-sm-6"><strong>Apellido 2:</strong></div>' +
-					'<div class="col-sm-6 fondo-datos-perfil">' + apellido2_datosContactoUnico + '</div>' +
-				'</div>' +
-				'<div class="row center-block margin-rows-perfil">' +
-					'<div class="col-sm-6"><strong>Telefono:</strong></div>' +
-					'<div class="col-sm-6 fondo-datos-perfil">' + telefono_datosContactoUnico + '</div>' +
-				'</div>' +
-				'<div class="row center-block margin-rows-perfil">' +
-					'<div class="col-sm-6"><strong>Correo:</strong></div>' +
-					'<div class="col-sm-6 fondo-datos-perfil">' + correo_datosContactoUnico + '</div>' +
-				'</div>' +
-				'<div class="row center-block margin-rows-perfil">' +
-					'<div class="col-sm-6"><strong>Mas informacion:</strong></div>' +
-					'<div class="col-sm-6 fondo-datos-perfil">' + informacion_datosContactoUnico + '</div>' +
-				'</div>' +
-				'<div class="row center-block margin-rows-perfil">' +
-					'<div class="col-sm-6"><strong>Sexo:</strong></div>' +
-					'<div class="col-sm-6 fondo-datos-perfil">' + destacado_datosContactoUnico + '</div>' +
+				'<div class="col-sm-6 center-block">' +
+					'<div class="row center-block margin-rows-perfil">' +
+						'<div class="col-sm-6"><strong>Nombre a mostrar:</strong></div>' +
+						'<div class="col-sm-6 fondo-datos-perfil">' + nombreMostrar_datosContactoUnico + '</div>' +
+					'</div>' +
+					'<div class="row center-block margin-rows-perfil">' +
+						'<div class="col-sm-6"><strong>Nombre 1:</strong></div>' +
+						'<div class="col-sm-6 fondo-datos-perfil">' + nombre1_datosContactoUnico + '</div>' +
+					'</div>' +
+					'<div class="row center-block margin-rows-perfil">' +
+						'<div class="col-sm-6"><strong>Nombre 2:</strong></div>' +
+						'<div class="col-sm-6 fondo-datos-perfil">' + nombre2_datosContactoUnico + '</div>' +
+					'</div>' +
+					'<div class="row center-block margin-rows-perfil">' +
+						'<div class="col-sm-6"><strong>Apellido 1:</strong></div>' +
+						'<div class="col-sm-6 fondo-datos-perfil">' + apellido1_datosContactoUnico + '</div>' +
+					'</div>' +
+					'<div class="row center-block margin-rows-perfil">' +
+						'<div class="col-sm-6"><strong>Apellido 2:</strong></div>' +
+						'<div class="col-sm-6 fondo-datos-perfil">' + apellido2_datosContactoUnico + '</div>' +
+					'</div>' +
+					'<div class="row center-block margin-rows-perfil">' +
+						'<div class="col-sm-6"><strong>Telefono:</strong></div>' +
+						'<div class="col-sm-6 fondo-datos-perfil">' + telefono_datosContactoUnico + '</div>' +
+					'</div>' +
+					'<div class="row center-block margin-rows-perfil">' +
+						'<div class="col-sm-6"><strong>Correo:</strong></div>' +
+						'<div class="col-sm-6 fondo-datos-perfil">' + correo_datosContactoUnico + '</div>' +
+					'</div>' +
+					'<div class="row center-block margin-rows-perfil">' +
+						'<div class="col-sm-6"><strong>Mas informacion:</strong></div>' +
+						'<div class="col-sm-6 fondo-datos-perfil">' + informacion_datosContactoUnico + '</div>' +
+					'</div>' +
+					'<div class="row center-block margin-rows-perfil">' +
+						'<div class="col-sm-6"><strong>Destacado:</strong></div>' +
+						'<div class="col-sm-6 fondo-datos-perfil">' + destacado_datosContactoUnico + '</div>' +
+					'</div>' +
 				'</div>';
 
 				titulo += '' +
-				'<img class="img-thumbnail img-foto-contactos" src="' + 
-				fotoRuta_datosContactoUnico + foto_datosContactoUnico + fotoExt_datosContactoUnico + '" alt="foto contacto"><h2>' + nombreMostrar_datosContactoUnico + '</h2>';
+					'<div class="row">' +
+						'<div class="col-sm-1">' +
+							'<img class="img-thumbnail img-foto-contactos" src="' + fotoRuta_datosContactoUnico + foto_datosContactoUnico + fotoExt_datosContactoUnico + '" alt="foto contacto">' +
+						'</div>' +
+						'<div class="col-sm-5">' +
+							'<h2 class="titulo-nombre-contactoUnico">' + nombreMostrar_datosContactoUnico + '</h2>' +
+						'</div>' +
+					'</div>';
 
 			} else {
 				tabla += 'Aun no hay registros';

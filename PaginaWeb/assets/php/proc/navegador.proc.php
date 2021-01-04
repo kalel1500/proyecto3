@@ -7,7 +7,7 @@
 				<span class="icon-bar"></span> 
 			</button>
 
-			<a class="navbar-brand  minav-caja-logo" href="index.php?mostrar=contactos"><img class="minav-logo" src="./assets/imagenes/logo/logo.png"/>MyContacts</a>
+			<a class="navbar-brand  minav-caja-logo" href="index.php"><img class="minav-logo" src="./assets/imagenes/logo/logo.png"/>MyContacts</a>
 			
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
