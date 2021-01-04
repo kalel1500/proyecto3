@@ -1,5 +1,5 @@
 <?php
-	include "asets/php/conexion.proc.php";
+	include "../asets/php/proc/conexion.proc.php";
 	$sql = "SELECT `titulo_multimedia` FROM `tbl_multimedia`";
 
 	$consulta=mysqli_query($link, $sql);

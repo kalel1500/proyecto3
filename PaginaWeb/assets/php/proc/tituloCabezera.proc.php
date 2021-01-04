@@ -11,7 +11,7 @@
 					<div class="col-sm-6">
 						<div class='search-box'>
 							<form class='search-form' id="id-form-buscar">
-								<input class='form-control' id="input-form-buscar" placeholder='Buscar contactos... nick, nombres, apellidos, numero o correo' type='text' list="div-datos-datalist" disabled>
+								<input class='form-control' id="input-form-buscar" placeholder='Buscar contactos... nick, nombres, apellidos, numero o correo' type='text' list="div-datos-datalist" disabled title="Deshabilitado por falta de tiempo">
 								
 								<button class='btn btn-link search-btn' disabled>
 									<i class='glyphicon glyphicon-search'></i>
@@ -38,32 +38,5 @@
 				echo "<h1 class='cabecera'>Esta pagina no existe</h1>";
 				break;
 		}
-	} else {
-		?>
-		<div class="row">
-			<div class="col-sm-4">
-				<h1 class='cabecera'>Contactos</h1>
-			</div>
-			<div class="col-sm-6">
-				<div class='search-box'>
-					<form class='search-form'>
-						<input class='form-control' placeholder='Buscar contactos...' type='text' list="browsers">
-						
-						<button class='btn btn-link search-btn'>
-							<i class='glyphicon glyphicon-search'></i>
-						</button>
-
-						<datalist id="browsers">
-							<option value="Internet Explorer">
-							<option value="Firefox">
-							<option value="Chrome">
-							<option value="Opera">
-							<option value="Safari">
-						</datalist>
-					</form>
-				</div>
-			</div>
-		</div>
-		<?php
 	}
 ?>

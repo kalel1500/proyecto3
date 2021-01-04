@@ -51,7 +51,7 @@
 						<div class="container margin-container">
 							<?php
 								if (!isset($_REQUEST['mostrar'])) {
-									echo "Esta pagina no existe";
+									include "assets/php/inicio.php";
 								} else {
 									$mostrar = $_REQUEST['mostrar'];
 									switch ($mostrar) {
@@ -79,10 +79,11 @@
 						</div>
 					</section>
 
-					<footer class="container-fluid text-center">
-						<p>Adrian Canals - Joel Moreno</p>
-					</footer>
-				<?php
+					<?php if (isset($_REQUEST['mostrar'])) { ?>
+						<footer class="container-fluid text-center">
+							<p>Adrian Canals - Joel Moreno</p>
+						</footer>
+				<?php }
 			}
 		?>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -99,8 +100,8 @@
 		<script src="assets/js/ajax_perfil_eliminar.js" type="text/javascript"></script>
 
 		<!-- // scripts mapa -->
-		<!-- <script src="assets/js/ajax_mapa.js" type="text/javascript"></script>
-		 -->
+		<script src="assets/js/ajax_mapa.js" type="text/javascript"></script>
+		
 		<!-- // scripts contactos -->
 		<script src="assets/js/contactos_display_inputs.js" type="text/javascript"></script>
 		<script src="assets/js/ajax_contactos_datos.js" type="text/javascript"></script>

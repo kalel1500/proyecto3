@@ -72,10 +72,10 @@ body{
 	.signup-form .row div:last-child{
 		padding-left: 10px;
 	}
-	.signup-form a{
+/*	.signup-form a{
 		color: #fff;
 		text-decoration: underline;
-	}
+	}*/
 	.signup-form a:hover{
 		text-decoration: none;
 	}

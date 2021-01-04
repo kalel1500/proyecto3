@@ -113,10 +113,10 @@ function consultarDatos_datosPerfil(){
 					'<div class="col-sm-6"><strong>Correo:</strong></div>' +
 					'<div class="col-sm-6 fondo-datos-perfil">' + correo_datosPerfil + '</div>' +
 				'</div>' +
-				'<div class="row center-block margin-rows-perfil">' +
+				/*'<div class="row center-block margin-rows-perfil">' +
 					'<div class="col-sm-6"><strong>Mas informacion:</strong></div>' +
 					'<div class="col-sm-6 fondo-datos-perfil">' + informacion_datosPerfil + '</div>' +
-				'</div>' +
+				'</div>' +*/
 				'<div class="row center-block margin-rows-perfil">' +
 					'<div class="col-sm-6"><strong>Sexo:</strong></div>' +
 					'<div class="col-sm-6 fondo-datos-perfil">' + sexo_datosPerfil + '</div>' +

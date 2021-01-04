@@ -1,0 +1,11 @@
+.h1-titulo-inicio {
+	font-family: 'Concert One', cursive;
+	font-size: 6em;
+}
+.div-titulo-inicio{
+	width: fit-content;
+	background-color: #1264abc7;
+	padding: 20px;
+	border-radius: 10px;
+	color: aliceblue;
+}

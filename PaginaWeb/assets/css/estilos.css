@@ -5,6 +5,7 @@
 @import url(contactos.css);
 @import url(navegador.css);
 @import url(mapa.css);
+@import url(inicio.css);
 
 html {
 	min-height: 100%;
@@ -14,9 +15,18 @@ body.margin {
 	margin: 0;
 	margin-bottom: 100px;
 	margin-top: 51px;
+	background-image: url('../imagenes/background/bg_inicio_11.jpg');
+	background-image: no-repeat;
+	background-image: fixed;
+	background-image: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-attachment: fixed;
 }
 footer {
-	background-color: #555;
+	background-color: #408ddcc7; /*background-color: #408ddc;*/ /*background-color: #555;*/
 	color: white;
 	padding: 15px;
 
@@ -31,16 +41,15 @@ footer {
 
 li:hover {
 	color: #fff;
-    background-color: #080808;
+	background-color: #080808;
 }
 
 
 .jumbotron {
 	padding: 0px;
-    margin-bottom: 30px;
-    color: inherit;
-    background-color: #bfb6ff;
-    
+	margin-bottom: 30px;
+	color: inherit;
+	background-color: #03055482; /*background-color: #bfb6ff;*/
 }
 
 .jumbotron h1 {
@@ -61,7 +70,7 @@ li:hover {
 
 /*.marginTopSearch {
 margin-top: 20px;
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .withSearch {
@@ -69,21 +78,39 @@ margin-top: 20px;
 }*/
 
 .div-alertas {
-    position: fixed;
-    right: 0;
-    
-    bottom: 0;
-    margin: 58px 111px;
-    padding: 10px;
-    border-radius: 3px;
-    border: 1px solid;
-    /*color: wheat;*/
-    display: none;
-    z-index: 10000;
+	position: fixed;
+	right: 0;
+	
+	bottom: 0;
+	margin: 58px 111px;
+	padding: 10px;
+	border-radius: 3px;
+	border: 1px solid;
+	/*color: wheat;*/
+	display: none;
+	z-index: 10000;
 }
 .rojo {
 	background-color: #ff3434;
 }
 .verde {
 	background-color: #76FF6F;
+}
+
+.centrado-porcentual {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}
+
+.label-campo-obligatorio {
+	clear: both;
+    color: #444;
+    display: block;
+    font-size: 9px;
+    line-height: 9px;
+    margin: 0;
+    padding-top: 3px;
 }

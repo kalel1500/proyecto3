@@ -55,24 +55,29 @@
 		<?php } ?>
 		<div class="form-group">
 			<div class="row">
-				<div class="col-xs-6"><input type="text" class="form-control" name="nombre" placeholder="Nombre" required="required"></div>
-				<div class="col-xs-6"><input type="text" class="form-control" name="apellido" placeholder="Apellido" required="required"></div>
+				<div class="col-xs-6"><input type="text" class="form-control" name="nombre" placeholder="Nombre"></div>
+				<div class="col-xs-6"><input type="text" class="form-control" name="apellido" placeholder="Apellido"></div>
 			</div>
 		</div>
 		<div class="form-group">
 			<input type="text" class="form-control" name="usuario" placeholder="Usuario para login" required="required">
+			<label class="label-campo-obligatorio">Campo obligatorio*</label>
 		</div>
 		<div class="form-group">
 			<input type="email" class="form-control" name="email" placeholder="Email" required="required">
+			<label class="label-campo-obligatorio">Campo obligatorio*</label>
 		</div>
 		<div class="form-group">
 			<input type="password" class="form-control" name="password" placeholder="Contraseña" required="required">
+			<label class="label-campo-obligatorio">Campo obligatorio*</label>
 		</div>
 		<div class="form-group">
-			<input type="password" class="form-control" name="confirm_password" placeholder="Contraseña" required="required">
+			<input type="password" class="form-control" name="confirm_password" placeholder="Confirmar contraseña" required="required">
+			<label class="label-campo-obligatorio">Campo obligatorio*</label>
 		</div>
 		<div class="form-group">
 			<label class="checkbox-inline"><input type="checkbox" required="required"> Acepto los <a href="#">Terminos de Uso</a> &amp; <a href="#">la Politica de Privacidad</a></label>
+			<label class="label-campo-obligatorio">Campo obligatorio*</label>
 		</div>
 		<div class="form-group">
 			<button type="submit" class="btn btn-success btn-lg btn-block">Registrar Ahora</button>

@@ -51,7 +51,7 @@ function cargaContenido_modificarPerfil(url, metodo, funcion) {
 		}
 		
 		peticion_modificarPerfil.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-		peticion_modificarPerfil.send("nombreArchivo_usuario="+foto_modificarPerfil+"&usuario_usuario="+usuario_modificarPerfil+"&nombre1_usuario="+nombre1_modificarPerfil+"&nombre2_usuario="+nombre2_modificarPerfil+"&apellido1_usuario="+apellido1_modificarPerfil+"&apellido2_usuario="+apellido2_modificarPerfil+"&telefono_usuario="+telefono_modificarPerfil+"&email_usuario="+correo_modificarPerfil+"&comentario_usuario="+informacion_modificarPerfil+"&sexo_usuario="+sexo_modificarPerfil+"&password_usuario="+password_modificarPerfil+"&existePass_usuario="+existePass_modificarPerfil);
+		peticion_modificarPerfil.send("nombreArchivo_usuario="+foto_modificarPerfil+"&usuario_usuario="+usuario_modificarPerfil+"&nombre1_usuario="+nombre1_modificarPerfil+"&nombre2_usuario="+nombre2_modificarPerfil+"&apellido1_usuario="+apellido1_modificarPerfil+"&apellido2_usuario="+apellido2_modificarPerfil+"&telefono_usuario="+telefono_modificarPerfil+"&email_usuario="+correo_modificarPerfil+"&comentario_usuario=&sexo_usuario="+sexo_modificarPerfil+"&password_usuario="+password_modificarPerfil+"&existePass_usuario="+existePass_modificarPerfil);
 		
 			
 	}
@@ -81,7 +81,7 @@ function insertarDatos_modificarPerfil(){
 	apellido2_modificarPerfil=document.form_mod_perfil.inp_apellido2.value;
 	telefono_modificarPerfil=document.form_mod_perfil.inp_telefono.value;
 	correo_modificarPerfil=document.form_mod_perfil.inp_correo.value;
-	informacion_modificarPerfil=document.form_mod_perfil.inp_informacion.value;
+	/*informacion_modificarPerfil=document.form_mod_perfil.inp_informacion.value;*/
 	sexo_modificarPerfil=document.form_mod_perfil.inp_sexo.value;
 	checkboxPass_modificarPerfil=document.form_mod_perfil.inp_reset_pass;
 

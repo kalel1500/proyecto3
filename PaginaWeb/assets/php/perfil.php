@@ -44,9 +44,9 @@
 							</div>
 
 							<div class="form-group" style="display: none;" id="group_subir-foto">
-								<label class="col-sm-4 control-label" for="inp_subirFoto">Cambiar</label>
+								<label class="col-sm-4 control-label" for="inp_subirFoto">Seleccionar archivo</label>
 								<div class="col-sm-8">
-									<input class="form-control" type="file" id="inp_subirFoto" name="inp_subirFoto" disabled value="default_user">
+									<input class="form-control" type="file" id="inp_subirFoto" name="inp_subirFoto" disabled value="default_user" title="Deshabilitado por falta de tiempo">
 								</div>
 							</div>
 							
@@ -102,12 +102,12 @@
 								</div>
 							</div>
 							
-							<div class="form-group">
+							<!-- <div class="form-group">
 								<label class="col-sm-4 control-label" for="inp_informacion">Mas información</label>
 								<div class="col-sm-8">
-									<textarea class="form-control" rows="4" id="inp_informacion" name="inp_informacion" value="<?php echo $_SESSION['comentario_usuario']; ?>"></textarea>
+									<textarea class="form-control" rows="4" id="inp_informacion" name="inp_informacion" maxlength="130"><?php /*echo*/ $_SESSION/*'comentario_usuario'*/; ?></textarea>
 								</div>
-							</div>
+							</div> -->
 							
 							<div class="form-group">
 								<label class="col-sm-4 control-label" for="inp1_sexo">Sexo</label>
@@ -147,6 +147,18 @@
 										</label>
 										<label class="radio-inline">
 											<input type="radio" name="inp_sexo" id="inp3_sexo" value="Otros" checked> Otros
+										</label>
+										<?php
+									} else {
+										?>
+										<label class="radio-inline">
+											<input type="radio" name="inp_sexo" id="inp1_sexo" value="Hombre"> Hombre
+										</label>
+										<label class="radio-inline">
+											<input type="radio" name="inp_sexo" id="inp2_sexo" value="Mujer"> Mujer
+										</label>
+										<label class="radio-inline">
+											<input type="radio" name="inp_sexo" id="inp3_sexo" value="Otros"> Otros
 										</label>
 										<?php
 									}
