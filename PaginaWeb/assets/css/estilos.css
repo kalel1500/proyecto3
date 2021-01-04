@@ -1,0 +1,83 @@
+@import url(login.css);
+@import url(signin.css);
+@import url(perfil.css);
+@import url(buscador.css);
+@import url(contactos.css);
+
+html {
+	min-height: 100%;
+	position: relative;
+}
+body.margin {
+	margin: 0;
+	margin-bottom: 100px;
+	margin-top: 51px;
+}
+footer {
+	background-color: #555;
+	color: white;
+	padding: 15px;
+
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	
+	text-align: center;
+
+}
+
+li:hover {
+	color: #fff;
+    background-color: #080808;
+}
+
+
+.jumbotron {
+	padding: 0px;
+    margin-bottom: 30px;
+    color: inherit;
+    background-color: #bfb6ff;
+    
+}
+
+.jumbotron h1 {
+	font-size: 44px;
+}
+
+.center-block, .text-center {
+	float: none;
+}
+
+/*.img-thumbnail {
+	width: 50%;
+}*/
+
+/*.marginTopSearch {
+margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.withSearch {
+	width: 90% !important;
+}*/
+
+.div-alertas {
+    position: fixed;
+    right: 0;
+    
+    bottom: 0;
+    margin: 58px 111px;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid;
+    /*color: wheat;*/
+    display: none;
+    z-index: 10000;
+}
+.rojo {
+	background-color: #ff3434;
+}
+.verde {
+	background-color: #76FF6F;
+}
