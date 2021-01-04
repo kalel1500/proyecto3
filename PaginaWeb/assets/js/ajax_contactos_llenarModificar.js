@@ -91,11 +91,11 @@ function consultarDatos_llenarModrificar(){
 				document.getElementById('inp_correo_mod').value = correo_llenarModrificar;
 				document.getElementById('inp_informacion_mod').value = informacion_llenarModrificar;
 			} else {
-				tabla += 'Aun no hay registros';
+				//tabla += 'Aun no hay registros';
 			}
-			div_llenarModrificar.innerHTML = tabla;
+			//div_llenarModrificar.innerHTML = tabla;
 		} else {
-			div_llenarModrificar.innerHTML = "El usuario no existe";
+			//div_llenarModrificar.innerHTML = "El usuario no existe";
 		}
 	}
 }

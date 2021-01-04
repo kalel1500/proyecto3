@@ -21,7 +21,6 @@ var divAlertasVerde = document.getElementById('div-alertas-verde');
 var divErrorMos = document.getElementById('div_error_mostrar');
 var divErrorTel = document.getElementById('div_error_tel');
 
-var id_modificarContacto;
 
 function inicializaXhr_modificarContacto() {
 	if(window.XMLHttpRequest) {
@@ -52,7 +51,7 @@ function cargaContenido_modificarContacto(url, metodo, funcion, id) {
 				divErrorTel.innerHTML = msgTel;
 			}
 
-			setTimeout('borrarMensaje_modificarPerfil()',2000);
+			setTimeout('borrarMensaje_modificarContacto()',2000);
 			return false;
 			
 		}

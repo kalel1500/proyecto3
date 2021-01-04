@@ -111,10 +111,10 @@ function consultarDatos_datosContactos(){
 
 							tabla += '' +
 							'<tr class="contato-hover">' +
-								'<td data-toggle="modal" data-target="#mostrarContacto_modal"><img class="img-thumbnail img-foto-contactos" src="' + fotoRuta_datosContactos + foto_datosContactos + fotoExt_datosContactos + '" alt="foto contacto"></td>' +
-								'<td data-toggle="modal" data-target="#mostrarContacto_modal">' + nombreMostrar_datosContactos + '</td>' +
-								'<td data-toggle="modal" data-target="#mostrarContacto_modal">' + telefono_datosContactos + '</td>' +
-								'<td data-toggle="modal" data-target="#mostrarContacto_modal">' + correo_datosContactos + '</td>' +
+								'<td data-toggle="modal" data-target="#mostrarContacto_modal" onclick="escuchar_datosContactoUnico('+id_datosContactos+')"><img class="img-thumbnail img-foto-contactos" src="' + fotoRuta_datosContactos + foto_datosContactos + fotoExt_datosContactos + '" alt="foto contacto"></td>' +
+								'<td data-toggle="modal" data-target="#mostrarContacto_modal" onclick="escuchar_datosContactoUnico('+id_datosContactos+')">' + nombreMostrar_datosContactos + '</td>' +
+								'<td data-toggle="modal" data-target="#mostrarContacto_modal" onclick="escuchar_datosContactoUnico('+id_datosContactos+')">' + telefono_datosContactos + '</td>' +
+								'<td data-toggle="modal" data-target="#mostrarContacto_modal" onclick="escuchar_datosContactoUnico('+id_datosContactos+')">' + correo_datosContactos + '</td>' +
 								'<td>' + star + '</td>' +
 								'<td>' + 
 									'<span onclick="escuchar_llenarModrificar('+id_datosContactos+');escuchar_modificarContacto('+id_datosContactos+')" class="glyphicon glyphicon-pencil contato-hover-cursor" data-toggle="modal" data-target="#editarContacto_modal"></span>' + 

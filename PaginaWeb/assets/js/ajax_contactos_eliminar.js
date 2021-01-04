@@ -43,7 +43,7 @@ function insertarDatos_eliminarContacto(){
 	if(peticion_eliminarContacto.readyState == READY_STATE_COMPLETE) {
 		if(peticion_eliminarContacto.status == 200) {
 			
-			divAlertasVerde.innerHTML = "Perfil modificado con exito";
+			divAlertasVerde.innerHTML = "Contacto eliminado con exito";
 			divAlertasVerde.style.display = "inherit";
 
 			setTimeout('borrarMensaje_eliminarContacto()',1000);
